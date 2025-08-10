@@ -135,22 +135,22 @@ if (["how are you", "how r u", "how are u", "how's it going", "kese ho", "kese h
      return api.sendMessage("Main Hun Naw Jaaneman ❤️", threadID);
    };
 
-   if ((event.body.toLowerCase() == "priyansh") || (event.body.toLowerCase() == "priyansh rajput") || (event.body.toLowerCase() == "priyansh") || (event.body.toLowerCase() == "prince")) {
+   if ((event.body.toLowerCase() == "sameer") || (event.body.toLowerCase() == "sameer khan") || (event.body.toLowerCase() == "Sameer") || (event.body.toLowerCase() == "SAMEER")) {
      return api.sendMessage( "Busy HoGa Work Me Main t0o Hun Naw 😘",threadID);
 
        
    };
 
    if ((event.body.toLowerCase() == "owner") || (event.body.toLowerCase() == "Owner")) {
-     return api.sendMessage("💝🥀𝐎𝐖𝐍𝐄𝐑:- ☞꧁𝐙𝐚𝐢𝐧𝐢-𝐉𝐮𝐭𝐭꧂☜ 💫\n🖤𝚈𝚘𝚞 𝙲𝚊𝚗 𝙲𝚊𝚕𝚕 𝙷𝚒𝚖 ℤ𝔸𝕀ℕ ℙℝ𝕀ℕℂ𝔼🖤\n😳𝐇𝐢𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝🤓:- ☞https://www.facebook.com/profile.php?id=100086033644262&mibextid=ZbWKwL \n👋For Any Kind Of Help Contact On Telegram  Username 👉 @zainijutt7😇", threadID);
+     return api.sendMessage("💝🥀𝐎𝐖𝐍𝐄𝐑:- ☞𝐒𝐀𝐌𝐄𝐄𝐑 𝐊𝐇𝐀𝐍 💫\n🖤𝚈𝚘𝚞 𝙲𝚊𝚗 𝙲𝚊𝚕𝚕 𝙷𝚒𝚖 𝕊𝔸𝕄𝔼𝔼ℝ 𝕂ℍ𝔸ℕ🖤\n😳𝐇𝐢𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝🤓:- ☞https://www.facebook.com/share/14GM3dWWGnR \n👋For Any Kind Of Help Contact On Telegram  Username 👉 @Sameerkhan😇", threadID);
    };
 
    if ((event.body.toLowerCase() == "tumhe banaya kon hai") || (event.body.toLowerCase() == "tumko banaya kisne")) {
-     return api.sendMessage("Zaini jutt  ❤️ My Creator. He loves me & Edit Me Daily. Ye Bot Sirf Owner k Liye h. Mujhe Aap logo ko Hasane k liye banya gya h Toh Muh Ladkaye Mat Rakkha Karo. Har Waqt Haste Raho.", threadID);
+     return api.sendMessage("Sameer khan  ❤️ My Creator. He loves me & Edit Me Daily. Ye Bot Sirf Owner k Liye h. Mujhe Aap logo ko Hasane k liye banya gya h Toh Muh Ladkaye Mat Rakkha Karo. Har Waqt Haste Raho.", threadID);
    };
 
   if ((event.body.toLowerCase() == "bot admin") || (event.body.toLowerCase() == "bot ka admin kon ha")) {
-     return api.sendMessage("He is zain. He Gives his name zain everywhare", threadID);
+     return api.sendMessage("He is sameer. He Gives his name sameer everywhare", threadID);
    };
 
    if ((event.body.toLowerCase() == "shadi karoge") || (event.body.toLowerCase() == "mujhse shadi karoge?")) {
@@ -782,8 +782,8 @@ if ((event.body.toLowerCase() == "💥")) {
     return api.sendMessage("Explosion hone wala hai! 💥", threadID);
 };
 
-if ((event.body.toLowerCase() == "🐘")) {
-    return api.sendMessage("Aap elephant ki tarah strong ho! 🐘", threadID);
+if ((event.body.toLowerCase() == "🍁")) {
+    return api.sendMessage("😻  ✄𝐌𝐞𝐑𝐢𝐢🥀 𝐩𝐘𝐚𝐑𝐢🥀 𝐉𝗮𝗮𝗡🌿🌬️☞🌏 𝐉aȠȠaƬ🥀 😻🥀 𝐁𝐚𝐁𝐔🥀 🌙𝐊𝐚🥀 𝐅𝐚𝐕𝐨𝐑𝐢𝐭𝗲♡🍁🧡>³••🕊️🍎😍🌿🥀. :))))", threadID);
 };
 
 if ((event.body.toLowerCase() == "🍟")) {
@@ -843,21 +843,16 @@ if ((event.body.toLowerCase() == "🥑")) {
   if (event.body.indexOf("Bot") == 0 || (event.body.indexOf("bot") == 0)) {
 
 var msg = {
-  body: `╭─═⊰❖⊱═─╮
-│ 🤖 ʙᴏᴛ: 𝑅𝐷𝑋 𝐵𝒪𝒯
-╰─═⊰❖⊱═─╯
+  body: `╠═♧${name}♧═╣,                        🦋❤🌹❤🦋   
+      
 
-╔═══════🌸═══════╗
-║ ⫷★『${name}』★⫸     
-╠═══════🪷═══════╣
-                            
-  "${rand}"     
-                            
-╠═══════🌺═══════╣
-║ ✦ ░▒ 𝓞𝓦𝓝𝓔𝓡 ▒░ ✦     
-╠═══════🏵️═══════╣
-║ ⊰❀ 𝕊𝕒𝕣𝕕𝕒𝕣 𝕽𝕯𝕏 ❀⊱    
-╚═══════🍄═══════╝`
+      
+      ${rand} 
+
+      
+     𝐓𝐈𝐌𝐄 𝐍♡𝐖 🕙 »» ${time} 
+     
+        *★᭄𝗖𝗿𝗲𝗱𝗶𝘁'𝘀  𒁍⃝𓆩̬𝚂ɑ͜͡ɑ͜͡ɱɘɘr᩶𓆪᭄`
 }
   return api.sendMessage(msg, threadID, messageID);
   };
