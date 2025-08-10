@@ -28,8 +28,8 @@ module.exports.handleEvent = async ({ api, event, Threads }) => {
  const body = content.toLowerCase();
  if (body.startsWith("🥺")) {
  const rahad = [
- "╭•┄┅════❁🌺❁════┅┄•╮\n \n আমি বলবো কেমন করে আমার শরিলের লোম দারিয়ে যায়-!!🥺\n\n╰•┄┅════❁🌺❁════┅┄•╯",
- "╭•┄┅════❁🌺❁════┅┄•╮\n\nআমি বলবো কেমন করে আমার শরিলের লোম দারিয়ে যায়-!!🥺\n\n╰•┄┅════❁🌺❁════┅┄•╯"
+ "╭•┄┅════❁🌺❁════┅┄•╮\n \n Me ApKo BaTaunGa Ki Mere Sarir ke Bal kese khade ho jate he-!!🥺\n\n╰•┄┅════❁🌺❁════┅┄•╯",
+ "╭•┄┅════❁🌺❁════┅┄•╮\n\nMe Apko Bataunga ki Mere sarir ke bal kese khade ho jate he-!!🥺\n\n╰•┄┅════❁🌺❁════┅┄•╯"
 
  ];
  const rahad2 = rahad[Math.floor(Math.random() * rahad.length)];
