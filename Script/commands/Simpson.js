@@ -1,10 +1,10 @@
 module.exports.config = {
-	name: "obama",
+	name: "simpson",
 	version: "1.0.1",
 	hasPermssion: 0,
-	credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
-	description: "Obama Tweet post",
-	commandCategory: "edit-img",
+	credits: "Tiadals",
+	description: "zzzzz",
+	commandCategory: "Edit-img",
 	usages: "[text]",
 	cooldowns: 10,
 	dependencies: {
@@ -44,29 +44,31 @@ module.exports.wrapText = (ctx, text, maxWidth) => {
 } 
 
 module.exports.run = async function({ api, event, args }) {
-	let { senderID, threadID, messageID } = event;
+  let { senderID, threadID, messageID } = event;
 	const { loadImage, createCanvas } = require("canvas");
 	const fs = global.nodemodule["fs-extra"];
 	const axios = global.nodemodule["axios"];
-	let pathImg = __dirname + '/cache/trump.png';
+	let pathImg = __dirname + '/cache/simpson.png';
 	var text = args.join(" ");
-	if (!text) return api.sendMessage("Enter the content of the comment on the board", threadID, messageID);
-	let getPorn = (await axios.get(`https://i.postimg.cc/nhT7Vd2W/6fOxdex.png`, { responseType: 'arraybuffer' })).data;
+  if (event.type == "message_reply") {
+        text = event.messageReply.body}
+	if (!text) return api.sendMessage("Nhập nội dung cần viết !11", threadID, messageID);
+	let getPorn = (await axios.get(`https://i.postimg.cc/sxSkfXks/meme1.jpg`, { responseType: 'arraybuffer' })).data;
 	fs.writeFileSync(pathImg, Buffer.from(getPorn, 'utf-8'));
 	let baseImage = await loadImage(pathImg);
 	let canvas = createCanvas(baseImage.width, baseImage.height);
 	let ctx = canvas.getContext("2d");
 	ctx.drawImage(baseImage, 0, 0, canvas.width, canvas.height);
-	ctx.font = "400 45px Arial";
+	ctx.font = "400 30px Arial";
 	ctx.fillStyle = "#000000";
 	ctx.textAlign = "start";
-	let fontSize = 250;
-	while (ctx.measureText(text).width > 2600) {
+	let fontSize = 20;
+	while (ctx.measureText(text).width > 2000) {
 		fontSize--;
-		ctx.font = `400 ${fontSize}px Arial, sans-serif`;
+		ctx.font = `400 ${fontSize}px Arial, Regular`;
 	}
-	const lines = await this.wrapText(ctx, text, 1160);
-	ctx.fillText(lines.join('\n'), 60,165);//comment
+	const lines = await this.wrapText(ctx, text, 450);
+	ctx.fillText(lines.join('\n'), 120, 100);//comment
 	ctx.beginPath();
 	const imageBuffer = canvas.toBuffer();
 	fs.writeFileSync(pathImg, imageBuffer);

@@ -1,11 +1,11 @@
 module.exports.config = {
-	name: "obama",
+	name: "purpose2",
 	version: "1.0.1",
 	hasPermssion: 0,
-	credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
-	description: "Obama Tweet post",
-	commandCategory: "edit-img",
-	usages: "[text]",
+	credits: "AZIZ",
+	description: "",
+	commandCategory: "general",
+	usages: "mark [text]",
 	cooldowns: 10,
 	dependencies: {
 		"canvas":"",
@@ -48,27 +48,27 @@ module.exports.run = async function({ api, event, args }) {
 	const { loadImage, createCanvas } = require("canvas");
 	const fs = global.nodemodule["fs-extra"];
 	const axios = global.nodemodule["axios"];
-	let pathImg = __dirname + '/cache/trump.png';
+	let pathImg = __dirname + '/cache/markngu.png';
 	var text = args.join(" ");
-	if (!text) return api.sendMessage("Enter the content of the comment on the board", threadID, messageID);
-	let getPorn = (await axios.get(`https://i.postimg.cc/nhT7Vd2W/6fOxdex.png`, { responseType: 'arraybuffer' })).data;
+	if (!text) return api.sendMessage("Enter Your Bla Bla", threadID, messageID);
+	let getPorn = (await axios.get(`https://i.imgur.com/GvrPI6v.jpeg`, { responseType: 'arraybuffer' })).data;
 	fs.writeFileSync(pathImg, Buffer.from(getPorn, 'utf-8'));
 	let baseImage = await loadImage(pathImg);
 	let canvas = createCanvas(baseImage.width, baseImage.height);
 	let ctx = canvas.getContext("2d");
 	ctx.drawImage(baseImage, 0, 0, canvas.width, canvas.height);
-	ctx.font = "400 45px Arial";
-	ctx.fillStyle = "#000000";
+	ctx.font = "540 220px emphasized";
+	ctx.fillStyle = "#0000FF";
 	ctx.textAlign = "start";
-	let fontSize = 250;
-	while (ctx.measureText(text).width > 2600) {
+	let fontSize = 100;
+	while (ctx.measureText(text).width > 2250) {
 		fontSize--;
-		ctx.font = `400 ${fontSize}px Arial, sans-serif`;
+		ctx.font = `540 ${fontSize}px emphasized, bold`;
 	}
-	const lines = await this.wrapText(ctx, text, 1160);
-	ctx.fillText(lines.join('\n'), 60,165);//comment
+	const lines = await this.wrapText(ctx, text, 800);
+	ctx.fillText(lines.join('\n'), 620,370);//comment
 	ctx.beginPath();
 	const imageBuffer = canvas.toBuffer();
 	fs.writeFileSync(pathImg, imageBuffer);
 return api.sendMessage({ attachment: fs.createReadStream(pathImg) }, threadID, () => fs.unlinkSync(pathImg), messageID);        
-  }
+}

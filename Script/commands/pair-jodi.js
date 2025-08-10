@@ -1,8 +1,8 @@
 module.exports.config = {
-    name: "love",
+    name: "jodi2",
     version: "7.3.1",
     hasPermssion: 0,
-    credits: "Alvi",///don't change my Credit Coz i Edit 
+    credits: " Arun",///don't change my Credit Coz i Edit 
     description: "Get Pair From Mention",
     commandCategory: "img",
     usages: "[@mention]",
@@ -20,9 +20,9 @@ module.exports.onLoad = async() => {
     const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
     const { downloadFile } = global.utils;
     const dirMaterial = __dirname + `/cache/canvas/`;
-    const path = resolve(__dirname, 'cache/canvas', 'arr2.png');
+    const path = resolve(__dirname, 'cache/canvas', 'ar2.png');
     if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
-    if (!existsSync(path)) await downloadFile("https://i.postimg.cc/tgsxXqct/arr2.jpg", path); 
+    if (!existsSync(path)) await downloadFile("https://i.ibb.co/BzqGJcv/image.jpg", path); 
 }
 
 async function makeImage({ one, two }) {
@@ -32,7 +32,7 @@ async function makeImage({ one, two }) {
     const jimp = global.nodemodule["jimp"];
     const __root = path.resolve(__dirname, "cache", "canvas");
 
-    let batgiam_img = await jimp.read(__root + "/arr2.png");
+    let batgiam_img = await jimp.read(__root + "/ar2.png");
     let pathImg = __root + `/batman${one}_${two}.png`;
     let avatarOne = __root + `/avt_${one}.png`;
     let avatarTwo = __root + `/avt_${two}.png`;
@@ -45,7 +45,7 @@ async function makeImage({ one, two }) {
     
     let circleOne = await jimp.read(await circle(avatarOne));
     let circleTwo = await jimp.read(await circle(avatarTwo));
-    batgiam_img.composite(circleOne.resize(200, 200), 70, 110).composite(circleTwo.resize(200, 200), 465, 110);
+    batgiam_img.composite(circleOne.resize(200, 200), 60, 180).composite(circleTwo.resize(200, 200), 610, 180);
     
     let raw = await batgiam_img.getBufferAsync("image/png");
     
@@ -69,6 +69,6 @@ module.exports.run = async function ({ event, api, args }) {
     if (!mention[0]) return api.sendMessage("Please mention 1 person.", threadID, messageID);
     else {
         const one = senderID, two = mention[0];
-        return makeImage({ one, two }).then(path => api.sendMessage({ body: "╭──────•◈•───────╮\n         🌸===『*★𝗖𝗿𝗲𝗱𝗶𝘁'𝘀 𒁍𝐒𝐀𝐦𝐞𝐞𝐫 𝐊𝐡𝐀𝐚𝐧☜ ✧•❁       \n\n━━━━⊱🩷⊰━━━━\n🌻⑅⃝𝐋𝐨𝐯𝟑🪴𝐏𝐚𝐢𝐫𝐢𝐧𝐆🩷⑅⃝┉❈\n━━━━⊱🩷⊰━━━━\n💜🌻┼─🌈— •°─༅༎༅💖 ❥︎:-🌼💚_𝐅𝐞𝐞𝐥𝐢𝐧𝐆𝐬 𝐚𝐫𝟯 𝐦𝐚𝐧𝐲 𝐁𝐮𝐭 𝐭𝐡𝐞 𝐥𝐚𝐧𝐆𝐮𝐚𝐆𝐞 𝐨𝐟 𝐞𝐱𝐩𝐫𝟯𝐬𝐬𝐢𝐨𝐧 𝐢𝐬 𝐟𝐞𝐰:-🌼🌻\n\n彡❝:-🌼💞✶⊶⊷⊷❍⊶⊷⊷✶                    ─━━◉❖𝐈 𝐋𝐎𝐯𝟑 𝐘𝐨𝐔🤗❖◉━━─           ❥═≛𝐒𝐨 𝐌𝐮𝐂𝐡 💝≛═❥                ─━━◉❖ 𝐌𝘆 𝗝𝐚𝐚𝐧𝐔 🙈❖◉━━─🪴✨💜\n\━━━━⊱🩷⊰━━━━\n🌻⑅⃝🩷⑅⃝┉❈\n━━━━⊱🩷⊰━━━━\n\n  Ỗ𝐖ηᗴ𝐑◉❖𒁍𝐒𝐀𝐦𝐞𝐞𝐫 𝐊𝐡𝐀𝐚𝐧 ッ\n╰──────•◈•───────╯", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
+        return makeImage({ one, two }).then(path => api.sendMessage({ body: "", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
     }
       }

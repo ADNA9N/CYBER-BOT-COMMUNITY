@@ -1,11 +1,11 @@
-module.exports.config = {
-    name: "married",
-    version: "3.1.1",
+﻿module.exports.config = {
+    name: "couple3",
+    version: "2.0.0",
     hasPermssion: 0,
-    credits: "John Lester",
-    description: "married",
-    commandCategory: "img",
-    usages: "[@mention]",
+    credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
+    description: "Seo phi",
+    commandCategory: "Love",
+    usages: "[tag]",
     cooldowns: 5,
     dependencies: {
         "axios": "",
@@ -20,9 +20,9 @@ module.exports.onLoad = async() => {
     const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
     const { downloadFile } = global.utils;
     const dirMaterial = __dirname + `/cache/canvas/`;
-    const path = resolve(__dirname, 'cache/canvas', 'married.png');
+    const path = resolve(__dirname, 'cache/canvas', 'seophi.png');
     if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
-    if (!existsSync(path)) await downloadFile("https://i.ibb.co/PjWvsBr/13bb9bb05e53ee24893940892b411ad2.png", path);
+    if (!existsSync(path)) await downloadFile("https://i.imghippo.com/files/GXR6737QXQ.jpeg", path);
 }
 
 async function makeImage({ one, two }) {
@@ -32,7 +32,7 @@ async function makeImage({ one, two }) {
     const jimp = global.nodemodule["jimp"];
     const __root = path.resolve(__dirname, "cache", "canvas");
 
-    let batgiam_img = await jimp.read(__root + "/married.png");
+    let batgiam_img = await jimp.read(__root + "/seophi.png");
     let pathImg = __root + `/batman${one}_${two}.png`;
     let avatarOne = __root + `/avt_${one}.png`;
     let avatarTwo = __root + `/avt_${two}.png`;
@@ -45,7 +45,7 @@ async function makeImage({ one, two }) {
     
     let circleOne = await jimp.read(await circle(avatarOne));
     let circleTwo = await jimp.read(await circle(avatarTwo));
-    batgiam_img.composite(circleOne.resize(150, 150), 280, 45).composite(circleTwo.resize(150, 150), 130, 90);
+    batgiam_img.resize(1024, 712).composite(circleOne.resize(200, 200), 527, 141).composite(circleTwo.resize(200, 200), 389, 407);
     
     let raw = await batgiam_img.getBufferAsync("image/png");
     
@@ -62,13 +62,19 @@ async function circle(image) {
     return await image.getBufferAsync("image/png");
 }
 
-module.exports.run = async function ({ event, api, args }) {    
+module.exports.run = async function ({ event, api, args }) {
     const fs = global.nodemodule["fs-extra"];
     const { threadID, messageID, senderID } = event;
-    const mention = Object.keys(event.mentions);
-    if (!mention[0]) return api.sendMessage("Please mention 1 person.", threadID, messageID);
+    var mention = Object.keys(event.mentions)[0]
+    let tag = event.mentions[mention].replace("@", "");
+    if (!mention) return api.sendMessage("Vui lòng tag 1 người", threadID, messageID);
     else {
-        const one = senderID, two = mention[0];
-        return makeImage({ one, two }).then(path => api.sendMessage({ body: "╭──────•◈•───────╮\n         𝗜𝘀𝗹𝗮𝗺𝗶𝗰𝗸 𝗰𝗵𝗮𝘁 𝗯𝗼𝘁       \n\n__𝘆𝗼𝘂 𝗰𝗮𝗺𝗲 𝘁𝗼 𝗺𝘆 𝗰𝗶𝘁𝘆__!!😽🥀🌸\n\n__𝗧𝗵𝗮𝘁'𝘀 𝘄𝗵𝘆 𝗸𝗿𝗶𝘀𝗵𝗻𝗮𝗰𝗵𝘂𝗿𝗮 𝗳𝗹𝗼𝘄𝗲𝗿 𝗶𝘀 𝗯𝗹𝗼𝗼𝗺𝗶𝗻𝗴 𝗼𝗻 𝗯𝗿𝗮𝗻𝗰𝗵𝗲𝘀__!!🌺🥀😌\n\n_তুমি এসেছিলে আমার শহরে-!!🌸✨🤗\n__তাই কৃষ্ণচূড়া ফুল ফুটছে ডালে ডালে-!! 🖤🌻🥀🌼\n\n  BOT OWNER Ullash ッ\n╰──────•◈•───────╯", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
+        var one = senderID, two = mention;
+        return makeImage({ one, two }).then(path => api.sendMessage({ body: "Ship ",
+            mentions: [{
+          tag: tag,
+          id: mention
+        }],
+     attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
     }
-      }
+}
