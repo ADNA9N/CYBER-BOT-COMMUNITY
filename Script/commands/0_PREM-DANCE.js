@@ -4,7 +4,7 @@ module.exports.config = {
     version: "2.1.1",
   hasPermssion: 0,
   credits: "PREM BABU", 
-  description: "THIS BOT WAS MADE BY MR PREM BABU",
+  description: "THIS BOT WAS MADE BY MR SAMEER KHAN",
   commandCategory: "NO PREFIX",
     cooldowns: 5, 
 };
@@ -18,7 +18,7 @@ module.exports.handleEvent = async ({ api, event, Users, Currencies, args, utils
 react.includes("NACH") ||
 react.includes("DANCE")) {
     var msg = {
-        body: ``,attachment: fs.createReadStream(__dirname + `/PREM-BABU/PREM-GIF/0_PREM-DANCE.gif`)
+        body: ``,attachment: fs.createReadStream(__dirname + `/noprefix/DANCE (1).gif`)
       }
       api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("🤓", event.messageID, (err) => {}, true)
