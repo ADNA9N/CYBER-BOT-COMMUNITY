@@ -840,23 +840,33 @@ if ((event.body.toLowerCase() == "🥑")) {
   
    mess = "{name}"
   
-  if (event.body.indexOf("Bot") == 0 || (event.body.indexOf("bot") == 0)) {
+  if (event.body.includes("Bot") == 1 ||
+     (event.body.includes("bot") == 1 ||
+     (event.body.includes("BOT") == 1 ||
+     (event.body.includes("BABU") == 1 ||
+     (event.body.includes("Babu") == 1 ||
+     (event.body.includes("babu") == 1 ||
+     (event.body.includes("boot") == 1 ||
+     (event.body.includes("Oye") == 1 ||
+     (event.body.includes("oye") == 1 ))))))))) {
+      var msg = {
+        body: `${rand}`
+      }
+  var msg = {
+    body: `⫷╍╍╍╍╍╍💖╍╍╍╍╍╍⫸
+       ◄───╬❆☠️❅╬───►
+      ❤️🌿🍒${name}🌿🥀💙,
+       ◄───╬❆😈❅╬───► \n\n
+          ${rand} 🎻♡💋🤣🍁❤
+          
+𐄪༆🦋ﮩ٨ﮩ٨ـ🌺🌿♡🌿😘ﮩ٨ﮩ٨ـ༆𐄪,
 
-var msg = {
-  body: `⫷╍╍╍╍╍❀╍╍╍╍╍⫸
-       ╠═♧${name}♧═╣,                           
-      
-
-      
-      ${rand} 🎻♡💋⪼🤣💝
-
-      
-     𝚃ɪ̽i͠ɱƏ ɳ❍Ꮗ 🕙 »» ${time} 
-     
-        *★᭄𝗖𝗿𝗲𝗱𝗶𝘁'𝘀  𒁍⃝𓆩̬𝚂ɑ͜͡ɑ͜͡ɱɘɘr᩶𓆪᭄`
-}
+ *★᭄𝗢𝘄𝗻𝗲𝗿 ཫ༄𒁍≛⃝❦ ════ •⊰𝐒𝐀𝐌𝐄𝐄𝐑⊱• ════ ❦🍀🍒 ❥||ㅎ
+ 
+𐄪༆🦋ﮩ٨ﮩ٨ـ🌺🌿♡🌿😘ﮩ٨ﮩ٨ـ༆𐄪`
+  }
   return api.sendMessage(msg, threadID, messageID);
-  };
+};
 
 }
 
