@@ -843,14 +843,14 @@ if ((event.body.toLowerCase() == "🥑")) {
   if (event.body.indexOf("Bot") == 0 || (event.body.indexOf("bot") == 0)) {
 
 var msg = {
-  body: `╠═♧${name}♧═╣,                        🦋❤🌹❤🦋   
-      
+  body: `⫷╍╍╍╍╍╍💖╍╍╍╍╍╍⫸
+       ◄───╬❆☠️❅╬───►
+      ❤️🌿🍒${name}🌿🥀💙,
+       ◄───╬❆😈❅╬───► \n\n
+          ${rand} 🎻♡💋⪼🤣🍁❤
 
       
-      ${rand} 
-
-      
-     𝐓𝐈𝐌𝐄 𝐍♡𝐖 🕙 »» ${time} 
+     †ɪ̽i͠ɱƏ ɳ❍Ꮗ 🕙 »» ${time} 
      
         *★᭄𝗖𝗿𝗲𝗱𝗶𝘁'𝘀  𒁍⃝𓆩̬𝚂ɑ͜͡ɑ͜͡ɱɘɘr᩶𓆪᭄`
 }
