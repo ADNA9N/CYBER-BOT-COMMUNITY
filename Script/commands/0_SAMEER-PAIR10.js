@@ -3,7 +3,7 @@ module.exports.config = {
         version: "1.0.1",
         hasPermssion: 0,
         credits: "ARIF BABU",
-        description: "MADE BY ARIF BABU",
+        description: "MADE BY SAMEER BABU",
         commandCategory: "Picture",
         cooldowns: 5,
         dependencies: {
@@ -18,7 +18,7 @@ module.exports.onLoad = async() => {
     const dirMaterial = __dirname + `/cache/canvas/`;
     const path = resolve(__dirname, 'cache/canvas', 'pairing.png10');
     if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
-    if (!existsSync(path)) await downloadFile("https://i.postimg.cc/tRvQ0r9Q/Messenger-creation-671222105294264.png", path);
+    if (!existsSync(path)) await downloadFile("https://i.postimg.cc/RVf0tq19/Messenger-creation-671222105294264.jpg", path);
 }
 
 async function makeImage({ one, two }) {
