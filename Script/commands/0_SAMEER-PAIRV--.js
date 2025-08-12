@@ -3,7 +3,7 @@ module.exports.config = {
   version: "1.0.0",
   hasPermssion: 0,
   credits: "PREM BABU",
-  description: "THIS BOT IS MADE BY PREM BABU",
+  description: "THIS BOT IS MADE BY SAMEER BABU",
   usePrefix: true,
   commandCategory: "LOVE PAIRING",
   usages: "PAIR-3",
