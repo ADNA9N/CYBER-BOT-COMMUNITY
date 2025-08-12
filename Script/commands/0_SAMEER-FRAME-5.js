@@ -1,5 +1,5 @@
 module.exports.config = {
-    name: "frame6",
+    name: "frame5",
     version: "7.3.1",
     hasPermssion: 0,
     credits: "Arun Kumar",///don't change my Credit Coz i Edit 
