@@ -3,7 +3,7 @@ module.exports.config = {
         version: "1.0.1",
         hasPermssion: 0,
         credits: "LEGEND ARYAN",
-        description: "MADE BY LEGEND ARYAN",
+        description: "MADE BY LEGEND SAMEER",
         commandCategory: "Picture",
         cooldowns: 5,
         dependencies: {
@@ -18,7 +18,7 @@ module.exports.onLoad = async() => {
     const dirMaterial = __dirname + `/cache/canvas/`;
     const path = resolve(__dirname, 'cache/canvas', 'pairing.png9');
     if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
-    if (!existsSync(path)) await downloadFile("https://i.postimg.cc/JngqxBCg/Messenger-creation-606006352418862.png", path);
+    if (!existsSync(path)) await downloadFile("https://i.postimg.cc/mDNwhTdS/ara.jpg", path);
 }
 
 async function makeImage({ one, two }) {
