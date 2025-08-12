@@ -1,9 +1,9 @@
 module.exports.config = {
-    name: "fram3",
+    name: "frame2",
     version: "7.3.1",
     hasPermssion: 0,
     credits: "AADI BABU",
-    description: "THIS BOT WAS MADE BY MR AADI BABU",
+    description: "THIS BOT WAS MADE BY MR SAMEER BABU",
     commandCategory: "PROFILE DP FRAME",
     usages: "PREFIX MENTION",
     cooldowns: 5,
