@@ -1,9 +1,9 @@
 module.exports.config = {
-  name: "birthday",
+  name: "birthdaydp",
   version: "1.0.0",
   hasPermssion: 0,
   credits: "ARIF BABU",
-  description: "THIS BOT IS MADE BY ARIF BABU",
+  description: "THIS BOT IS MADE BY SAMEER BABU",
   commandCategory: "PROFILE DP",
   usages: "SELF DP AND MENTION",
   dependencies: {
@@ -56,7 +56,7 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
 
   var background = [
 
-    "https://i.imgur.com/y77QpRe.jpg"
+    "https://i.postimg.cc/cL7wRdyg/y77QpRe.jpg"
 ];
   var rd = background[Math.floor(Math.random() * background.length)];
 
