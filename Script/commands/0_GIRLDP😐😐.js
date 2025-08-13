@@ -5,7 +5,7 @@ module.exports.config = {
   credits: "JULMI JAAT",
   description: "Girl Dp photos",
   commandCategory: "Random-IMG",
-  usages: "girl dp",
+  usages: "girl photo",
   cooldowns: 2,
   dependencies: {
     "request":"",
